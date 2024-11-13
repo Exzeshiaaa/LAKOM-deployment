@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Ranchers");
+
+:root {
+  --wtf-red: #c23d18;
+  --wtf-red-dark: #af3817;
+  --wtf-blue: #4297fb;
+  --wtf-blue-dark: #3a85db;
+}
+
+* {
+  box-sizing: border-box;
+  color: #525252;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* nav styles */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.nav__logo {
+  color: rgb(5, 5, 116);
+  padding-left: 20px;
+  width: 100px;
+}
+
+.hamburger {
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.nav__link {
+  float: right;
+  position: fixed;
+  width: 150px;
+  margin: 0 auto;
+  top: 4rem;
+  right: 1rem;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: lightgray;
+  background-color: white;
+}
+
+.nav__link li a {
+  display: block;
+  text-align: right;
+  padding: 15px 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.upper {
+  border-bottom: 1px solid lightgray;
+}
+
+.nav__link li a:hover {
+  color: var(--wtf-red);
+}
+
+.hide {
+  display: none;
+}
+
+/* main */
+
+.main {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin: 5rem auto 3rem;
+}
+
+.main .logo {
+  width: 100%;
+  padding: 0 30px;
+}
+
+.logo h1 {
+  font-family: "Ranchers", sans-serif;
+  letter-spacing: 5px;
+  font-size: 4em;
+  line-height: 1em;
+  color: var(--wtf-red);
+}
+
+.logo h2 {
+  font-weight: bold;
+  font-size: 1em;
+  margin: 1rem auto 3rem;
+}
+
+/* main-submission */
+
+.submission {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.user-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.user-input::placeholder {
+  color: lightgray;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--wtf-blue);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.submit-button:hover {
+  background-color: var(--wtf-blue-dark);
+}
+
+/* main-description */
+.main-description h2 {
+  font-weight: bold;
+  font-size: 1.25em;
+  margin: 1rem auto 0.5rem;
+}
+
+.main-description p {
+  font-size: 1em;
+  margin: 0 2em 5rem;
+}
+
+/* platforms */
+.platforms h1 {
+  font-weight: bold;
+  font-size: 1em;
+  margin: 1rem auto 0.5rem;
+}
+
+.platforms ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.platforms li img{
+  margin: 20px;
+  width: 150px;
+}
+
+#x {
+  width: 35px;
+}
+
+@media screen and (min-width: 635px) {
+  body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  .nav__link {
+    display: block;
+    position: static;
+    width: auto;
+    right: 0;
+    margin-right: 20px;
+    background: none;
+    border-width: 0px;
+  }
+
+  .nav__link li {
+    float: left;
+    padding: 15px 0px 15px 10px;
+    margin: 5px 0px 5px 5px;
+  }
+
+  ul.nav__link li a {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .upper {
+    border: 0;
+  }
+
+  #signup {
+    background-color: var(--wtf-red);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 5px 0px 5px 5px;
+  }
+
+  #signup:hover {
+    background-color: var(--wtf-red-dark);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  /* main */
+  .logo h1 {
+    font-family: "Ranchers", sans-serif;
+    letter-spacing: 5px;
+    font-size: 6em;
+    line-height: 1em;
+  }
+
+  .user-input {
+    width: 400px;
+  }
+
+  /* main-description */
+  .main-description p {
+    font-size: 1em;
+  }
+}

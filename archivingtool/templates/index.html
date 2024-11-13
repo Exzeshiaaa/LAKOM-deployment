@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'assets/styles/HowItWorks.module.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="main">
+	<!-- main logo -->
+	<div class="logo">
+		<h1>WHAT THE FAKE!</h1>
+		<h2>The Fact Checker's Archiving Tool</h2>
+	</div>
+
+	<!-- input submission -->
+	<div class="submission">
+		<form action="" method="POST">
+			{% csrf_token %}
+
+			{{ form.url }}
+			<button type="submit" class="submit-button">Submit</button>
+		</form>
+	</div>
+
+	<!-- main description -->
+	<div class="main-description">
+		<h2 id="main-desc-h2">Want to archive a fake news post? Submit it to our website!</h2>
+		<p>
+			By entering the URL to our submission bar, you can contribute to our disinformation posts archive.
+		</p>
+	</div>
+
+	<!-- supported platforms -->
+	<div class="platforms">
+		<h1>Supported platforms</h1>
+		<ul>
+				<!-- <li><img id="ig" src="{% static 'assets/images/ig-logo.png' %}"/></li> -->
+				<li><img id="fb" src="{% static 'assets/images/fb-logo.png' %}"/></li>
+				<li><img id="tt" src="{% static 'assets/images/tiktok-logo.png' %}"/></li>
+				<li><img id="yt" src="{% static 'assets/images/youtube-logo.png' %}"/></li>
+				<!-- <li><img id="x" src="{% static 'assets/images/x-logo.png' %}"/></li> -->
+		</ul>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<div class="howItWorks">How it works</div>
+	<br>
+	<div class="container">
+		<div class="containerHeader">Search.</div>
+		<div class="image">
+			<img src="{% static 'assets/images/Search.png' %}"> </img>
+		</div>
+		<div class="containerText">
+			Lorem ipsum dolor sit amet consectetur. Donec et lorem cursus turpis. Condimentum elementum malesuada sed nisl.
+		</div>
+	</div>
+	  
+	<div class="container2">
+		<div class="containerHeader">Process.</div>
+		<div class="image">
+			<img src="{% static 'assets/images/Process.png' %}">
+		</div>
+		<div class="containerText">
+			Lorem ipsum dolor sit amet consectetur. Donec et lorem cursus turpis. Condimentum elementum malesuada sed nisl.
+		</div>
+	</div>
+
+	  
+	<div class="container">
+		<div class="containerHeader">Archive.</div>
+		<div class="image">
+			<img src="{% static 'assets/images/Archive.png' %}">
+		</div>
+		<div class="containerText">
+			Lorem ipsum dolor sit amet consectetur. Donec et lorem cursus turpis. Condimentum elementum malesuada sed nisl.
+		</div>
+	</div>
+
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'scripts/script.js' %}"></script>
+{% endblock %}
+
