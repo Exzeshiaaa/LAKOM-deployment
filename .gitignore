@@ -1,0 +1,4 @@
+env/
+**/__pycache__/
+archivingtool/creds.json
+archivingtool/db.sqlite3
